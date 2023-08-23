@@ -18,6 +18,7 @@ def main():
     clock = pygame.time.Clock()
 
     defender = pygame.image.load("images/defender01.png")
+    defender = pygame.transform.scale(defender, (50, 50))
 
     running = True
     while running:
