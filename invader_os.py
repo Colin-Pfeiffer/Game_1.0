@@ -19,6 +19,8 @@ def main():
     pygame.display.set_caption("Bitmaps laden und ausgeben")
     clock = pygame.time.Clock()
 
+    background = pygame.image.load(os.path.join(Settings.IMAGE_PATH, "sunset.png")).convert_alpha()
+
     defender = pygame.image.load(os.path.join(Settings.IMAGE_PATH, "defender01.png")).convert_alpha()
     defender = pygame.transform.scale(defender, (50, 50))
 
@@ -32,6 +34,7 @@ def main():
                 running = False
 
         screen.fill("white")
+        screen.blit(background, (0, 0))
         screen.blit(defender, (100, 100))
         screen.blit(alien, (400, 100))
 
